@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package ejemplociclowhile;
+
 import java.util.Locale;
 import java.util.Scanner;
+
 /**
  *
  * @author reroes
  */
-public class Ejemplo02 {
+public class Ejemplo032 {
+
     /**
      * @param args the command line arguments
      */
@@ -18,22 +21,22 @@ public class Ejemplo02 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        //El use locale se lo usa para que el sistema cambie de coma a punto
-        int limite;
+        double limite = 5;
         int contador = 1;
-        System.out.println("Ingrese el Límite");
-        limite = entrada.nextInt(); 
-        while (contador <= limite){
-            
-            if (contador%2 != 0) {
-                // Si contador MOD 2 no es igual a 0
-                // != significa que no es igual, en este caso a cero
-                System.out.printf("Contador %d\n", 
-                    contador);
-            }
-            
+        double suma = 0;
+        int valor_ingresado;
+        double promedio;
+        
+        while (contador <= limite) { 
+            System.out.println("Ingrese el valor a sumar");
+            valor_ingresado = entrada.nextInt();
+            suma = suma + valor_ingresado;
+            System.out.printf("Valor ingresado %d\n", valor_ingresado);
             contador = contador + 1;
         }
-        
+        promedio = suma / limite;
+        System.out.printf("La suma final es %.2f\n", suma);
+        System.out.printf("EL promedio final es %.2f\n", promedio);
+
     }
 }
