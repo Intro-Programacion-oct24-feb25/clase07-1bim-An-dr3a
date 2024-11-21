@@ -32,7 +32,7 @@ public class Ejemplo061 {
                 + "estudiantes de su materia");
         // true 
         // while (bandera) {
-        while(bandera==true)
+        while(bandera==true){
             System.out.println("Ingrese calificación");
             calificacion = entrada.nextDouble();
 
